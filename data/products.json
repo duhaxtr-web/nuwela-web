@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "blazer-etek-takim-nu208",
+    "baslik": "Blazer Etek Takım (Nu208)",
+    "aciklama": "Ürün içeriği : Kol detay ceket, Etek, Kemer\nBadi dahil değildir\nRenk açık haki\nCeket : 60 cm\nEtek: 100 cm",
+    "durum": "aktif",
+    "resimler": {
+      "resim1": "/uploads/1780409983969-Nu208.jpeg",
+      "resim2": "/uploads/1780410077017-nu208-2.jpeg",
+      "resim3": "/uploads/1780410083666-nu208-3.jpeg",
+      "resim4": "/uploads/1780410088680-nu208-4.jpeg"
+    },
+    "fiyat": 2750,
+    "para_birimi": "TRY",
+    "koleksiyonlar": [
+      "Yeni Sezon",
+      "Takım"
+    ],
+    "etiketler": [
+      "yeni sezon",
+      "çok satan"
+    ],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "",
+    "seo_meta_aciklama": "",
+    "varyant_secenekleri": {
+      "beden": [
+        "36",
+        "38",
+        "40",
+        "42"
+      ],
+      "renk": [],
+      "kumas": [
+        "pamuk"
+      ]
+    },
+    "shopier_verileri": {
+      "shopier_url": "https://www.shopier.com/nuwelaboutique/47384384"
+    },
+    "sira": 1,
+    "id": "bb414791-7be6-4c7a-bdad-f41f959fe218",
+    "olusturulma_tarihi": "2026-06-02T14:21:46.725Z",
+    "guncelleme_tarihi": "2026-06-02T14:24:43.122Z"
+  }
+]

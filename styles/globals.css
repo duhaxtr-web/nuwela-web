@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1a1a1a;
+  --color-secondary: #8B7355;
+  --color-accent: #C4A882;
+  --color-background: #FAFAF8;
+  --color-surface: #F5F2EE;
+  --color-border: #E8E2DA;
+  --color-text-muted: #9E9189;
+  --color-success: #4A7C59;
+  --color-error: #C0392B;
+}
+
+html, body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12;
+  }
+  .container-narrow {
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 text-xs uppercase tracking-widest font-medium transition-colors hover:bg-secondary;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-4 text-xs uppercase tracking-widest font-medium transition-colors hover:bg-primary hover:text-white;
+  }
+  .input-base {
+    @apply w-full px-4 py-3 bg-white border border-border text-primary placeholder:text-muted focus:outline-none focus:border-primary transition-colors;
+  }
+  .label-base {
+    @apply block text-xs uppercase tracking-widest text-muted mb-2 font-medium;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-surface); }
+::-webkit-scrollbar-thumb { background: var(--color-border); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-secondary); }
+
+/* Selection */
+::selection { background-color: var(--color-accent); color: var(--color-primary); }
