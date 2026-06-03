@@ -35,8 +35,12 @@ async function readLocal(): Promise<Product[]> {
 }
 
 async function writeLocal(products: Product[]): Promise<void> {
-  await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
-  await fs.writeFile(DATA_FILE, JSON.stringify(products, null, 2), "utf-8");
+  try {
+    await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
+    await fs.writeFile(DATA_FILE, JSON.stringify(products, null, 2), "utf-8");
+  } catch {
+    // Vercel'de filesystem read-only, bu normaldir
+  }
 }
 
 async function readGithub(): Promise<Product[]> {
