@@ -55,7 +55,7 @@ export default async function AdminUrunlerPage() {
                 <td className="p-4">{formatPrice(p.fiyat)}</td>
                 <td className="p-4 text-right space-x-3">
                   <Link href={`/urunler/${p.slug}`} target="_blank" className="text-xs underline hover:text-secondary">Önizle</Link>
-                  <Link href={`/admin/urunler/${p.id}`} className="text-xs underline hover:text-secondary">Düzenle</Link>
+                  <Link href={`/admin/urunler/${p.id}`} prefetch={false} className="text-xs underline hover:text-secondary">Düzenle</Link>
                   <DeleteButton id={p.id} />
                 </td>
               </tr>
