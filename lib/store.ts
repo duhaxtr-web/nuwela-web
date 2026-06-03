@@ -102,13 +102,11 @@ export async function getProductById(id: string): Promise<Product | null> {
 }
 
 export async function saveAllProducts(products: Product[], message = "chore: update products"): Promise<void> {
-  await writeLocal(products);
   if (hasGithub()) {
-    try {
-      await writeGithub(products, message);
-    } catch (e) {
-      console.error("[store] GitHub write failed, local write succeeded:", e);
-    }
+    await writeGithub(products, message);
+    try { await writeLocal(products); } catch { /* local write optional on Vercel */ }
+  } else {
+    await writeLocal(products);
   }
 }
 

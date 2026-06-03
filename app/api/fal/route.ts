@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { isAuthenticated } from "@/lib/auth";
+import { verifyToken, getTokenFromReq } from "@/lib/auth";
 import { generateImage, IMAGE_PROMPTS, type ImagePromptKey } from "@/lib/fal-ai";
 
 export async function POST(req: Request) {
-  if (!isAuthenticated()) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
+  if (!verifyToken(getTokenFromReq(req))) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
   const body = await req.json();
   let prompt: string = body.prompt;
   if (!prompt && body.key && IMAGE_PROMPTS[body.key as ImagePromptKey]) {

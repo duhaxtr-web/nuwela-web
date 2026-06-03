@@ -37,3 +37,9 @@ export function checkCredentials(username: string, password: string): boolean {
 }
 
 export const COOKIE_NAME = COOKIE;
+
+export function getTokenFromReq(req: Request): string | undefined {
+  const cookieHeader = req.headers.get("cookie") || "";
+  const match = cookieHeader.split(";").map((c) => c.trim()).find((c) => c.startsWith(`${COOKIE}=`));
+  return match ? match.split("=").slice(1).join("=") : undefined;
+}

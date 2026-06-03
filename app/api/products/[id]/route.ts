@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { isAuthenticated } from "@/lib/auth";
+import { verifyToken, getTokenFromReq } from "@/lib/auth";
 import { getProductById, upsertProduct, deleteProduct } from "@/lib/store";
 import type { Product } from "@/types/product";
 
@@ -10,7 +10,7 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
 }
 
 export async function PUT(req: Request, { params }: { params: { id: string } }) {
-  if (!isAuthenticated()) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
+  if (!verifyToken(getTokenFromReq(req))) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
   const existing = await getProductById(params.id);
   if (!existing) return NextResponse.json({ error: "Bulunamadı" }, { status: 404 });
   const body = (await req.json()) as Partial<Product>;
@@ -27,7 +27,7 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
 }
 
 export async function DELETE(_req: Request, { params }: { params: { id: string } }) {
-  if (!isAuthenticated()) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
+  if (!verifyToken(getTokenFromReq(_req))) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
   await deleteProduct(params.id);
   return NextResponse.json({ ok: true });
 }
