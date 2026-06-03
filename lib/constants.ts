@@ -63,7 +63,8 @@ export const KOLEKSIYONLAR = [
 
 export const BEDENLER = [
   "XS", "S", "M", "L", "XL", "XXL", "XXXL", "Standart",
-  "36", "38", "40", "42", "44", "46",
+  "36", "38", "40", "42", "44", "46", "48", "50", "52", "54", "56", "58", "60",
+  "1", "2", "3", "4",
 ];
 
 export const URUN_TURLERI = [
