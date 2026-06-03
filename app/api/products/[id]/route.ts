@@ -10,20 +10,25 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
 }
 
 export async function PUT(req: Request, { params }: { params: { id: string } }) {
-  if (!verifyToken(getTokenFromReq(req))) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
-  const existing = await getProductById(params.id);
-  if (!existing) return NextResponse.json({ error: "Bulunamadı" }, { status: 404 });
-  const body = (await req.json()) as Partial<Product>;
-  const updated: Product = {
-    ...existing,
-    ...body,
-    id: existing.id,
-    olusturulma_tarihi: existing.olusturulma_tarihi,
-    guncelleme_tarihi: new Date().toISOString(),
-    para_birimi: "TRY",
-  };
-  await upsertProduct(updated);
-  return NextResponse.json(updated);
+  try {
+    if (!verifyToken(getTokenFromReq(req))) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
+    const existing = await getProductById(params.id);
+    if (!existing) return NextResponse.json({ error: "Bulunamadı" }, { status: 404 });
+    const body = (await req.json()) as Partial<Product>;
+    const updated: Product = {
+      ...existing,
+      ...body,
+      id: existing.id,
+      olusturulma_tarihi: existing.olusturulma_tarihi,
+      guncelleme_tarihi: new Date().toISOString(),
+      para_birimi: "TRY",
+    };
+    await upsertProduct(updated);
+    return NextResponse.json(updated);
+  } catch (err) {
+    console.error("[products PUT] failed:", err);
+    return NextResponse.json({ error: "Hata: " + (err instanceof Error ? err.message : String(err)) }, { status: 500 });
+  }
 }
 
 export async function DELETE(_req: Request, { params }: { params: { id: string } }) {
