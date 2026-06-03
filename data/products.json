@@ -85,5 +85,31 @@
     "id": "0098a9e6-87b2-4d19-b982-72a499f4fa8d",
     "olusturulma_tarihi": "2026-06-03T13:25:01.145Z",
     "guncelleme_tarihi": "2026-06-03T13:38:42.699Z"
+  },
+  {
+    "baslik": "SON-TEST",
+    "aciklama": "x",
+    "durum": "taslak",
+    "resimler": {
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/t.jpeg"
+    },
+    "fiyat": 1,
+    "koleksiyonlar": [],
+    "etiketler": [],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "",
+    "seo_meta_aciklama": "",
+    "varyant_secenekleri": {
+      "beden": [],
+      "renk": [],
+      "kumas": []
+    },
+    "shopier_verileri": {},
+    "sira": 99,
+    "id": "178b1249-d158-4d79-9405-dca485ea5e1b",
+    "slug": "son-test",
+    "olusturulma_tarihi": "2026-06-03T13:57:56.227Z",
+    "guncelleme_tarihi": "2026-06-03T13:57:56.227Z",
+    "para_birimi": "TRY"
   }
 ]
