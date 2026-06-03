@@ -28,6 +28,11 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
 
 export async function DELETE(_req: Request, { params }: { params: { id: string } }) {
   if (!verifyToken(getTokenFromReq(_req))) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
-  await deleteProduct(params.id);
+  try {
+    await deleteProduct(params.id);
+  } catch (err) {
+    console.error("[products DELETE] failed:", err);
+    return NextResponse.json({ error: "Silme hatası: " + (err instanceof Error ? err.message : String(err)) }, { status: 500 });
+  }
   return NextResponse.json({ ok: true });
 }

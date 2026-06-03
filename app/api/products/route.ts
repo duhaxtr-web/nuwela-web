@@ -24,6 +24,11 @@ export async function POST(req: Request) {
     guncelleme_tarihi: now,
     para_birimi: "TRY",
   };
-  await upsertProduct(product);
+  try {
+    await upsertProduct(product);
+  } catch (err) {
+    console.error("[products POST] upsert failed:", err);
+    return NextResponse.json({ error: "Kaydetme hatası: " + (err instanceof Error ? err.message : String(err)) }, { status: 500 });
+  }
   return NextResponse.json(product, { status: 201 });
 }
