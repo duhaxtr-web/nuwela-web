@@ -85,31 +85,5 @@
     "id": "0098a9e6-87b2-4d19-b982-72a499f4fa8d",
     "olusturulma_tarihi": "2026-06-03T13:25:01.145Z",
     "guncelleme_tarihi": "2026-06-03T13:38:42.699Z"
-  },
-  {
-    "baslik": "TEST-GUNCELLENDI",
-    "aciklama": "test",
-    "durum": "aktif",
-    "resimler": {
-      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/test.jpeg"
-    },
-    "fiyat": 1,
-    "koleksiyonlar": [],
-    "etiketler": [],
-    "urun_turu": "gunluk_zarafet",
-    "seo_baslik": "",
-    "seo_meta_aciklama": "",
-    "varyant_secenekleri": {
-      "beden": [],
-      "renk": [],
-      "kumas": []
-    },
-    "shopier_verileri": {},
-    "sira": 5,
-    "id": "90ddf987-4b96-4133-a547-fb671d0c3379",
-    "slug": "test-otomatik",
-    "olusturulma_tarihi": "2026-06-03T13:46:22.413Z",
-    "guncelleme_tarihi": "2026-06-03T13:46:53.899Z",
-    "para_birimi": "TRY"
   }
 ]
