@@ -91,5 +91,55 @@
     "id": "f5b2fd13-c435-478e-9c17-c80c0365d05d",
     "olusturulma_tarihi": "2026-06-03T14:05:07.230Z",
     "guncelleme_tarihi": "2026-06-03T14:25:10.348Z"
+  },
+  {
+    "slug": "t",
+    "baslik": "Tül Ceketli İkili Takım (NU84)",
+    "aciklama": "Gömlek ve tül ceket olmak üzere iki parçadan oluşmaktadır.\nGömlek kumaşı şifon\nCeket Tül \nKapüşonludur\nCeketin ön kısmında büzülebilir ip detayı mevcuttur\nGömlek: 70 Cm\nCeket Ön Kısım: 55 Cm\nCeket Arka Kısım: 85 Cm\n",
+    "durum": "taslak",
+    "resimler": {
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780496788983-22fc6eed-98c8-4aa1-bc5a-c78d163205ab.jfif",
+      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780497189047-6cc516f6-37dd-4a98-bcd5-cb963ae69c66.jfif",
+      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780497204587-5864a358-717c-4fca-9b25-6a04f02be602.jfif",
+      "resim4": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780497215443-f74c5341-0990-4f67-b017-d6763614e55b.jfif"
+    },
+    "fiyat": 2500,
+    "para_birimi": "TRY",
+    "koleksiyonlar": [
+      "Yeni Sezon",
+      "Takım",
+      "Üst Giyim"
+    ],
+    "etiketler": [
+      "çok satan",
+      "yeni",
+      "yenisezon",
+      "ikili takım",
+      "iklim",
+      "gömlek ceket takım",
+      "şıklık",
+      "kadıngiyim",
+      "tesettürgiyim"
+    ],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "Ceketli İkili Takım (NU84)",
+    "seo_meta_aciklama": "Ceketli İkili Takım (NU84)",
+    "varyant_secenekleri": {
+      "beden": [
+        "3",
+        "4"
+      ],
+      "renk": [],
+      "kumas": []
+    },
+    "shopier_verileri": {
+      "shopier_url": "https://www.shopier.com/nuwelaboutique/47730487",
+      "urun_id": "47730487",
+      "shopier_magaza_id": "www.shopier.com/nuwelaboutique"
+    },
+    "sira": 1,
+    "id": "2cce74af-d185-445f-942f-4039e8b3e492",
+    "olusturulma_tarihi": "2026-06-03T15:13:58.043Z",
+    "guncelleme_tarihi": "2026-06-03T15:13:58.043Z"
   }
 ]
