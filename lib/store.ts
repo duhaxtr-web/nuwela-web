@@ -51,7 +51,8 @@ async function readGithub(): Promise<Product[]> {
     if (!("content" in data)) return [];
     const decoded = Buffer.from(data.content, "base64").toString("utf-8");
     return JSON.parse(decoded);
-  } catch {
+  } catch (e) {
+    console.error("[store] readGithub failed:", e);
     return [];
   }
 }
