@@ -112,11 +112,32 @@ export async function getProductById(id: string): Promise<Product | null> {
 }
 
 export async function saveAllProducts(products: Product[], message = "chore: update products"): Promise<void> {
-  if (hasGithub()) {
-    await writeGithub(products, message);
-    try { await writeLocal(products); } catch { /* local write optional on Vercel */ }
+  let saved = false;
+
+  const token = process.env.GITHUB_TOKEN;
+  const owner = process.env.GITHUB_OWNER;
+  const repo = process.env.GITHUB_REPO;
+
+  if (token && owner && repo) {
+    try {
+      await writeGithub(products, message);
+      saved = true;
+    } catch (e) {
+      console.error("[store] GitHub write failed:", e);
+    }
   } else {
+    console.warn("[store] GitHub env vars missing — TOKEN:", !!token, "OWNER:", !!owner, "REPO:", !!repo);
+  }
+
+  try {
     await writeLocal(products);
+    saved = true;
+  } catch {
+    // Vercel'de filesystem read-only olduğu için beklenen durum
+  }
+
+  if (!saved) {
+    throw new Error("Ürünler kaydedilemedi: GitHub ve yerel depolama başarısız");
   }
 }
 
