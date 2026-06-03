@@ -72,36 +72,5 @@
     "id": "cea28db7-4bb6-4872-bdca-ef08c7792451",
     "olusturulma_tarihi": "2026-06-03T11:41:40.876Z",
     "guncelleme_tarihi": "2026-06-03T11:41:40.876Z"
-  },
-  {
-    "slug": "f",
-    "baslik": "ff",
-    "aciklama": "ff",
-    "durum": "aktif",
-    "resimler": {
-      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780486932601-g_rsel_2026-06-03_144212450.png"
-    },
-    "fiyat": 53,
-    "para_birimi": "TRY",
-    "koleksiyonlar": [
-      "Yeni Sezon"
-    ],
-    "etiketler": [],
-    "urun_turu": "gunluk_zarafet",
-    "seo_baslik": "",
-    "seo_meta_aciklama": "",
-    "varyant_secenekleri": {
-      "beden": [
-        "XXXL",
-        "XXL"
-      ],
-      "renk": [],
-      "kumas": []
-    },
-    "shopier_verileri": {},
-    "sira": 0,
-    "id": "cc207d40-8e8f-403a-ae3a-f91109d6106e",
-    "olusturulma_tarihi": "2026-06-03T11:42:22.073Z",
-    "guncelleme_tarihi": "2026-06-03T11:42:22.073Z"
   }
 ]
