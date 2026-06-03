@@ -52,6 +52,18 @@ export async function ghReadProducts(): Promise<Product[]> {
   }
 }
 
+async function currentSha(): Promise<string | undefined> {
+  try {
+    // Cache-busting query param ile taze SHA al (GitHub CDN eski içerik döndürebilir)
+    const url = `${base()}?ref=${cfg().branch}&_=${Date.now()}`;
+    const getRes = await fetch(url, { headers: headers(), cache: "no-store" });
+    if (getRes.ok) return (await getRes.json()).sha;
+  } catch {
+    // dosya henüz yok
+  }
+  return undefined;
+}
+
 export async function ghWriteProducts(products: Product[], message: string): Promise<void> {
   if (!hasGithub()) {
     throw new Error("GitHub ayarları eksik (GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO)");
@@ -64,29 +76,34 @@ export async function ghWriteProducts(products: Product[], message: string): Pro
   bytes.forEach((b) => (binary += String.fromCharCode(b)));
   const content = btoa(binary);
 
-  // Mevcut dosyanın SHA'sını al (güncelleme için gerekli)
-  let sha: string | undefined;
-  try {
-    const getRes = await fetch(`${base()}?ref=${cfg().branch}`, {
+  // GitHub içerik API'si yazdıktan sonra birkaç saniye eski SHA döndürebilir.
+  // 409 (çakışma) alırsak taze SHA ile birkaç kez yeniden deneriz.
+  const maxAttempts = 5;
+  let lastErr = "";
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const sha = await currentSha();
+    const body: Record<string, unknown> = { message, content, branch: cfg().branch };
+    if (sha) body.sha = sha;
+
+    const putRes = await fetch(base(), {
+      method: "PUT",
       headers: headers(),
-      cache: "no-store",
+      body: JSON.stringify(body),
     });
-    if (getRes.ok) sha = (await getRes.json()).sha;
-  } catch {
-    // dosya henüz yok
+
+    if (putRes.ok) return;
+
+    lastErr = `${putRes.status} ${await putRes.text()}`;
+
+    // 409 / 422 → SHA çakışması, kısa bekleyip taze SHA ile tekrar dene
+    if (putRes.status === 409 || putRes.status === 422) {
+      await new Promise((r) => setTimeout(r, 400 * attempt));
+      continue;
+    }
+
+    // Diğer hatalar (401, 404 vb.) tekrar denemeden başarısız
+    break;
   }
 
-  const body: Record<string, unknown> = { message, content, branch: cfg().branch };
-  if (sha) body.sha = sha;
-
-  const putRes = await fetch(base(), {
-    method: "PUT",
-    headers: headers(),
-    body: JSON.stringify(body),
-  });
-
-  if (!putRes.ok) {
-    const errText = await putRes.text();
-    throw new Error(`GitHub yazma hatası: ${putRes.status} ${errText}`);
-  }
+  throw new Error(`GitHub yazma hatası: ${lastErr}`);
 }
