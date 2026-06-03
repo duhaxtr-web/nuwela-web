@@ -42,14 +42,23 @@ async function writeLocal(products: Product[]): Promise<void> {
 async function readGithub(): Promise<Product[]> {
   const cfg = githubCfg();
   try {
-    const { data } = await octo().repos.getContent({
-      owner: cfg.owner,
-      repo: cfg.repo,
-      path: cfg.path,
-      ref: cfg.branch,
+    const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${cfg.path}?ref=${cfg.branch}`;
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `token ${process.env.GITHUB_TOKEN}`,
+        Accept: "application/vnd.github.v3+json",
+      },
+      cache: "no-store",
     });
-    if (!("content" in data)) return [];
-    const decoded = Buffer.from(data.content, "base64").toString("utf-8");
+    if (!res.ok) {
+      console.error("[store] readGithub HTTP:", res.status);
+      return [];
+    }
+    const data = await res.json();
+    if (!data.content) return [];
+    const b64 = data.content.replace(/\n/g, "");
+    const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+    const decoded = new TextDecoder("utf-8").decode(bytes);
     return JSON.parse(decoded);
   } catch (e) {
     console.error("[store] readGithub failed:", e);
