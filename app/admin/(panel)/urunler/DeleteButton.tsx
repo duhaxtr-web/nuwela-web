@@ -11,7 +11,8 @@ export function DeleteButton({ id }: { id: string }) {
       toast.success("Ürün silindi");
       router.refresh();
     } else {
-      toast.error("Silme başarısız");
+      const j = await res.json().catch(() => ({}));
+      toast.error(j.error || "Silme başarısız");
     }
   }
   return (
