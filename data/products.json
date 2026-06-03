@@ -42,5 +42,31 @@
     "id": "bb414791-7be6-4c7a-bdad-f41f959fe218",
     "olusturulma_tarihi": "2026-06-02T14:21:46.725Z",
     "guncelleme_tarihi": "2026-06-02T14:24:43.122Z"
+  },
+  {
+    "slug": "kol-plise-detay-takim",
+    "baslik": "Kol plise detay takım",
+    "aciklama": "Yakası inci detaylı\nKol plise detaylı\nPantolon beli lastikli\nKendinden kuşaklı\n1-2-3 beden (46 bedene kadar uyumlu)",
+    "durum": "aktif",
+    "resimler": {
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780486004260-nuw.jpeg"
+    },
+    "fiyat": 3150,
+    "para_birimi": "TRY",
+    "koleksiyonlar": [],
+    "etiketler": [],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "",
+    "seo_meta_aciklama": "",
+    "varyant_secenekleri": {
+      "beden": [],
+      "renk": [],
+      "kumas": []
+    },
+    "shopier_verileri": {},
+    "sira": 0,
+    "id": "587ec40d-d21f-41c7-a104-8edd8c8d5adc",
+    "olusturulma_tarihi": "2026-06-03T11:27:15.519Z",
+    "guncelleme_tarihi": "2026-06-03T11:27:15.519Z"
   }
 ]
