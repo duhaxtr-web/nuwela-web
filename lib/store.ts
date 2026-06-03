@@ -1,28 +1,30 @@
 import fs from "fs/promises";
 import path from "path";
-import { Octokit } from "@octokit/rest";
 import type { Product } from "@/types/product";
 
 const DATA_FILE = path.join(process.cwd(), "data", "products.json");
 
+const GH_TOKEN = () => process.env.GITHUB_TOKEN || "";
+const GH_OWNER = () => process.env.GITHUB_OWNER || "";
+const GH_REPO = () => process.env.GITHUB_REPO || "";
+const GH_BRANCH = () => process.env.GITHUB_BRANCH || "main";
+const GH_PATH = () => process.env.GITHUB_DATA_PATH || "data/products.json";
+
 function hasGithub(): boolean {
-  return Boolean(
-    process.env.GITHUB_TOKEN &&
-      process.env.GITHUB_OWNER &&
-      process.env.GITHUB_REPO,
-  );
+  return !!(GH_TOKEN() && GH_OWNER() && GH_REPO());
 }
 
-function octo() {
-  return new Octokit({ auth: process.env.GITHUB_TOKEN });
+function ghBase() {
+  return `https://api.github.com/repos/${GH_OWNER()}/${GH_REPO()}/contents/${GH_PATH()}`;
 }
 
-const githubCfg = () => ({
-  owner: process.env.GITHUB_OWNER!,
-  repo: process.env.GITHUB_REPO!,
-  branch: process.env.GITHUB_BRANCH || "main",
-  path: process.env.GITHUB_DATA_PATH || "data/products.json",
-});
+function ghHeaders() {
+  return {
+    Authorization: `token ${GH_TOKEN()}`,
+    Accept: "application/vnd.github.v3+json",
+    "Content-Type": "application/json",
+  } as const;
+}
 
 async function readLocal(): Promise<Product[]> {
   try {
@@ -39,31 +41,23 @@ async function writeLocal(products: Product[]): Promise<void> {
     await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
     await fs.writeFile(DATA_FILE, JSON.stringify(products, null, 2), "utf-8");
   } catch {
-    // Vercel'de filesystem read-only, bu normaldir
+    // Vercel'de filesystem read-only — normaldir, yoksay
   }
 }
 
 async function readGithub(): Promise<Product[]> {
-  const cfg = githubCfg();
+  if (!hasGithub()) return [];
   try {
-    const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${cfg.path}?ref=${cfg.branch}`;
-    const res = await fetch(url, {
-      headers: {
-        Authorization: `token ${process.env.GITHUB_TOKEN}`,
-        Accept: "application/vnd.github.v3+json",
-      },
+    const res = await fetch(`${ghBase()}?ref=${GH_BRANCH()}`, {
+      headers: ghHeaders(),
       cache: "no-store",
     });
-    if (!res.ok) {
-      console.error("[store] readGithub HTTP:", res.status);
-      return [];
-    }
+    if (!res.ok) return [];
     const data = await res.json();
     if (!data.content) return [];
-    const b64 = data.content.replace(/\n/g, "");
+    const b64 = (data.content as string).replace(/\n/g, "");
     const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
-    const decoded = new TextDecoder("utf-8").decode(bytes);
-    return JSON.parse(decoded);
+    return JSON.parse(new TextDecoder("utf-8").decode(bytes));
   } catch (e) {
     console.error("[store] readGithub failed:", e);
     return [];
@@ -71,30 +65,41 @@ async function readGithub(): Promise<Product[]> {
 }
 
 async function writeGithub(products: Product[], message: string): Promise<void> {
-  const cfg = githubCfg();
-  const client = octo();
+  // UTF-8 JSON → base64
+  const json = JSON.stringify(products, null, 2);
+  const bytes = new TextEncoder().encode(json);
+  let binary = "";
+  bytes.forEach((b) => (binary += String.fromCharCode(b)));
+  const content = btoa(binary);
+
+  // Mevcut SHA
   let sha: string | undefined;
   try {
-    const { data } = await client.repos.getContent({
-      owner: cfg.owner,
-      repo: cfg.repo,
-      path: cfg.path,
-      ref: cfg.branch,
+    const getRes = await fetch(`${ghBase()}?ref=${GH_BRANCH()}`, {
+      headers: ghHeaders(),
+      cache: "no-store",
     });
-    if ("sha" in data) sha = data.sha;
+    if (getRes.ok) {
+      const d = await getRes.json();
+      sha = d.sha;
+    }
   } catch {
-    /* file may not exist yet */
+    // yeni dosya
   }
-  const content = Buffer.from(JSON.stringify(products, null, 2)).toString("base64");
-  await client.repos.createOrUpdateFileContents({
-    owner: cfg.owner,
-    repo: cfg.repo,
-    path: cfg.path,
-    branch: cfg.branch,
-    message,
-    content,
-    sha,
+
+  const body: Record<string, unknown> = { message, content, branch: GH_BRANCH() };
+  if (sha) body.sha = sha;
+
+  const putRes = await fetch(ghBase(), {
+    method: "PUT",
+    headers: ghHeaders(),
+    body: JSON.stringify(body),
   });
+
+  if (!putRes.ok) {
+    const err = await putRes.text();
+    throw new Error(`GitHub write failed: ${putRes.status} ${err}`);
+  }
 }
 
 export async function getAllProducts(): Promise<Product[]> {
@@ -116,32 +121,11 @@ export async function getProductById(id: string): Promise<Product | null> {
 }
 
 export async function saveAllProducts(products: Product[], message = "chore: update products"): Promise<void> {
-  let saved = false;
-
-  const token = process.env.GITHUB_TOKEN;
-  const owner = process.env.GITHUB_OWNER;
-  const repo = process.env.GITHUB_REPO;
-
-  if (token && owner && repo) {
-    try {
-      await writeGithub(products, message);
-      saved = true;
-    } catch (e) {
-      console.error("[store] GitHub write failed:", e);
-    }
+  writeLocal(products); // async, sonucu önemsiz
+  if (hasGithub()) {
+    await writeGithub(products, message);
   } else {
-    console.warn("[store] GitHub env vars missing — TOKEN:", !!token, "OWNER:", !!owner, "REPO:", !!repo);
-  }
-
-  try {
-    await writeLocal(products);
-    saved = true;
-  } catch {
-    // Vercel'de filesystem read-only olduğu için beklenen durum
-  }
-
-  if (!saved) {
-    throw new Error("Ürünler kaydedilemedi: GitHub ve yerel depolama başarısız");
+    throw new Error("GitHub env vars eksik (GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO)");
   }
 }
 
