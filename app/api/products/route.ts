@@ -5,6 +5,9 @@ import { getAllProducts, upsertProduct } from "@/lib/store";
 import { slugify } from "@/lib/utils";
 import type { Product, ProductInput } from "@/types/product";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 export async function GET() {
   const products = await getAllProducts();
   return NextResponse.json(products);
