@@ -3,7 +3,7 @@
     "slug": "blazer-etek-takim-nu208",
     "baslik": "Blazer Etek Takım (Nu208)",
     "aciklama": "Ürün içeriği : Kol detay ceket, Etek, Kemer\nBadi dahil değildir\nRenk açık haki\nCeket : 60 cm\nEtek: 100 cm",
-    "durum": "aktif",
+    "durum": "taslak",
     "resimler": {
       "resim1": "/uploads/1780409983969-Nu208.jpeg",
       "resim2": "/uploads/1780410077017-nu208-2.jpeg",
@@ -47,7 +47,7 @@
     "sira": 4,
     "id": "bb414791-7be6-4c7a-bdad-f41f959fe218",
     "olusturulma_tarihi": "2026-06-02T14:21:46.725Z",
-    "guncelleme_tarihi": "2026-06-03T14:24:24.849Z"
+    "guncelleme_tarihi": "2026-06-03T14:24:59.497Z"
   },
   {
     "slug": "tas-ve-inci-islemeli-ithal-kot-ceket",
