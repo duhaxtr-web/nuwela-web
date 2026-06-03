@@ -59,7 +59,10 @@
     "seo_baslik": "",
     "seo_meta_aciklama": "",
     "varyant_secenekleri": {
-      "beden": [],
+      "beden": [
+        "XL",
+        "XXL"
+      ],
       "renk": [],
       "kumas": []
     },
@@ -67,6 +70,6 @@
     "sira": 0,
     "id": "587ec40d-d21f-41c7-a104-8edd8c8d5adc",
     "olusturulma_tarihi": "2026-06-03T11:27:15.519Z",
-    "guncelleme_tarihi": "2026-06-03T11:27:15.519Z"
+    "guncelleme_tarihi": "2026-06-03T11:27:47.376Z"
   }
 ]
