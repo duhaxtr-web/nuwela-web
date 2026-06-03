@@ -47,7 +47,7 @@
     "slug": "tas-ve-inci-islemeli-ithal-kot-ceket",
     "baslik": "Taş ve inci işlemeli ithal kot ceket",
     "aciklama": "Taş ve inci işlemeli\nTül detaylı\nDüğmeli\nStd beden (42 bedene kadar uyumlu)\nBoy 53 cm",
-    "durum": "pasif",
+    "durum": "aktif",
     "resimler": {
       "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780495444941-NUW2.jpeg",
       "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780495447066-NUW3.jpeg",
@@ -84,6 +84,6 @@
     "sira": 3,
     "id": "f5b2fd13-c435-478e-9c17-c80c0365d05d",
     "olusturulma_tarihi": "2026-06-03T14:05:07.230Z",
-    "guncelleme_tarihi": "2026-06-03T14:08:00.978Z"
+    "guncelleme_tarihi": "2026-06-03T14:08:34.549Z"
   }
 ]
