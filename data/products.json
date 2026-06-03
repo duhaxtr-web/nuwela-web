@@ -85,5 +85,48 @@
     "id": "0098a9e6-87b2-4d19-b982-72a499f4fa8d",
     "olusturulma_tarihi": "2026-06-03T13:25:01.145Z",
     "guncelleme_tarihi": "2026-06-03T14:03:34.573Z"
+  },
+  {
+    "slug": "tas-ve-inci-islemeli-ithal-kot-ceket",
+    "baslik": "Taş ve inci işlemeli ithal kot ceket",
+    "aciklama": "Taş ve inci işlemeli\nTül detaylı\nDüğmeli\nStd beden (42 bedene kadar uyumlu)\nBoy 53 cm",
+    "durum": "taslak",
+    "resimler": {
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780495444941-NUW2.jpeg",
+      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780495447066-NUW3.jpeg",
+      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780495450225-NUW4.jpeg"
+    },
+    "fiyat": 7100,
+    "indirimli_fiyat": 6035,
+    "para_birimi": "TRY",
+    "koleksiyonlar": [
+      "Yeni Sezon",
+      "Dış Giyim",
+      "Üst Giyim"
+    ],
+    "etiketler": [
+      "YENİ",
+      "ÇOK SATAN",
+      "İNDİRİM"
+    ],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "Taş ve inci işlemeli ithal kot ceket",
+    "seo_meta_aciklama": "Taş ve inci işlemeli\nTül detaylı\nDüğmeli\nStd beden (42 bedene kadar uyumlu)\nBoy 53 cm",
+    "varyant_secenekleri": {
+      "beden": [
+        "Standart"
+      ],
+      "renk": [],
+      "kumas": [
+        "KOT"
+      ]
+    },
+    "shopier_verileri": {
+      "shopier_url": "https://www.shopier.com/nuwelaboutique/44348603"
+    },
+    "sira": 3,
+    "id": "f5b2fd13-c435-478e-9c17-c80c0365d05d",
+    "olusturulma_tarihi": "2026-06-03T14:05:07.230Z",
+    "guncelleme_tarihi": "2026-06-03T14:05:07.230Z"
   }
 ]
