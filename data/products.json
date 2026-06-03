@@ -197,5 +197,57 @@
     "id": "c38422a8-88a6-4916-a93d-164541589284",
     "olusturulma_tarihi": "2026-06-03T15:30:28.060Z",
     "guncelleme_tarihi": "2026-06-03T15:31:07.358Z"
+  },
+  {
+    "slug": "tul-ceketli-ikili-takim-nu84",
+    "baslik": "Tül Ceketli İkili Takım (NU84)",
+    "aciklama": "Gömlek ve tül ceket olmak üzere iki parçadan oluşmaktadır.\nGömlek kumaşı şifon\nCeket Tül \nKapüşonludur\nCeketin ön kısmında büzülebilir ip detayı mevcuttur\nGömlek: 70 Cm\nCeket Ön Kısım: 55 Cm\nCeket Arka Kısım: 85 Cm\n",
+    "durum": "aktif",
+    "resimler": {
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780501041944-9446145c-3991-48c4-9316-9a10cfe3728d.jpg",
+      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780501075765-60fc9323-3535-439a-a2d8-d6798def8793.jpg",
+      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780501056781-f80143fc-bcf5-4736-91e5-ea9548618ffa.jpg"
+    },
+    "fiyat": 2499,
+    "para_birimi": "TRY",
+    "koleksiyonlar": [
+      "Yeni Sezon",
+      "Takım",
+      "Üst Giyim"
+    ],
+    "etiketler": [
+      "YENİ",
+      "ÇOKSATAN",
+      "ŞIK",
+      "YENİSEZON"
+    ],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "",
+    "seo_meta_aciklama": "",
+    "varyant_secenekleri": {
+      "beden": [
+        "2",
+        "3"
+      ],
+      "renk": [
+        {
+          "isim": "ACIKAHVE",
+          "kod": "#170202"
+        }
+      ],
+      "kumas": [
+        "ŞİFON",
+        "TÜL"
+      ]
+    },
+    "shopier_verileri": {
+      "shopier_url": "https://www.shopier.com/nuwelaboutique/47731436",
+      "urun_id": "47731436",
+      "shopier_magaza_id": "www.shopier.com/nuwelaboutique"
+    },
+    "sira": 4,
+    "id": "94031b16-f0fc-410d-9935-c99a72cc0b48",
+    "olusturulma_tarihi": "2026-06-03T15:39:40.529Z",
+    "guncelleme_tarihi": "2026-06-03T15:39:40.529Z"
   }
 ]
