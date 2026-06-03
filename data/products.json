@@ -98,7 +98,7 @@
     "slug": "t",
     "baslik": "Tül Ceketli İkili Takım (NU84)",
     "aciklama": "Gömlek ve tül ceket olmak üzere iki parçadan oluşmaktadır.\nGömlek kumaşı şifon\nCeket Tül \nKapüşonludur\nCeketin ön kısmında büzülebilir ip detayı mevcuttur\nGömlek: 70 Cm\nCeket Ön Kısım: 55 Cm\nCeket Arka Kısım: 85 Cm\n",
-    "durum": "taslak",
+    "durum": "aktif",
     "resimler": {
       "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780496788983-22fc6eed-98c8-4aa1-bc5a-c78d163205ab.jfif",
       "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780497189047-6cc516f6-37dd-4a98-bcd5-cb963ae69c66.jfif",
@@ -142,6 +142,6 @@
     "sira": 1,
     "id": "2cce74af-d185-445f-942f-4039e8b3e492",
     "olusturulma_tarihi": "2026-06-03T15:13:58.043Z",
-    "guncelleme_tarihi": "2026-06-03T15:13:58.043Z"
+    "guncelleme_tarihi": "2026-06-03T15:16:58.912Z"
   }
 ]
