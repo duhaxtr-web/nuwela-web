@@ -11,24 +11,24 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  if (!verifyToken(getTokenFromReq(req))) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
-  const body = (await req.json()) as ProductInput;
-  if (!body.baslik) return NextResponse.json({ error: "Başlık zorunlu" }, { status: 400 });
-
-  const now = new Date().toISOString();
-  const product: Product = {
-    ...body,
-    id: uuid(),
-    slug: body.slug || slugify(body.baslik),
-    olusturulma_tarihi: now,
-    guncelleme_tarihi: now,
-    para_birimi: "TRY",
-  };
   try {
+    if (!verifyToken(getTokenFromReq(req))) return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
+    const body = (await req.json()) as ProductInput;
+    if (!body.baslik) return NextResponse.json({ error: "Başlık zorunlu" }, { status: 400 });
+
+    const now = new Date().toISOString();
+    const product: Product = {
+      ...body,
+      id: uuid(),
+      slug: body.slug || slugify(body.baslik),
+      olusturulma_tarihi: now,
+      guncelleme_tarihi: now,
+      para_birimi: "TRY",
+    };
     await upsertProduct(product);
+    return NextResponse.json(product, { status: 201 });
   } catch (err) {
-    console.error("[products POST] upsert failed:", err);
-    return NextResponse.json({ error: "Kaydetme hatası: " + (err instanceof Error ? err.message : String(err)) }, { status: 500 });
+    console.error("[products POST] failed:", err);
+    return NextResponse.json({ error: "Hata: " + (err instanceof Error ? err.message : String(err)) }, { status: 500 });
   }
-  return NextResponse.json(product, { status: 201 });
 }
