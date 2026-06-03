@@ -47,7 +47,7 @@
     "slug": "a",
     "baslik": "aa",
     "aciklama": "aa",
-    "durum": "taslak",
+    "durum": "aktif",
     "resimler": {
       "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780486892485-nuw.jpeg"
     },
@@ -71,7 +71,7 @@
     "sira": 0,
     "id": "cea28db7-4bb6-4872-bdca-ef08c7792451",
     "olusturulma_tarihi": "2026-06-03T11:41:40.876Z",
-    "guncelleme_tarihi": "2026-06-03T11:41:40.876Z"
+    "guncelleme_tarihi": "2026-06-03T12:34:50.794Z"
   },
   {
     "slug": "s",
