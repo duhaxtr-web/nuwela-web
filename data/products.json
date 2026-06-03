@@ -77,7 +77,7 @@
     "slug": "s",
     "baslik": "sddd",
     "aciklama": "dsdss",
-    "durum": "taslak",
+    "durum": "aktif",
     "resimler": {
       "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780488244039-copy-of-ceramic-mug-11oz-15oz_4.jpg"
     },
@@ -102,6 +102,6 @@
     "sira": 4,
     "id": "740ea247-39fd-4938-a223-d7eb3771b2e3",
     "olusturulma_tarihi": "2026-06-03T12:04:19.194Z",
-    "guncelleme_tarihi": "2026-06-03T12:04:19.194Z"
+    "guncelleme_tarihi": "2026-06-03T12:13:41.255Z"
   }
 ]
