@@ -47,21 +47,31 @@ export function VariantSelector({ varyant }: { varyant: ProductVaryant }) {
             <span className="label-base">Renk</span>
             {renk && <span className="text-xs text-muted">Seçili: {renk}</span>}
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-4">
             {varyant.renk.map((r) => (
-              <motion.button
+              <button
                 key={r.isim}
                 type="button"
-                whileTap={{ scale: 0.95 }}
                 onClick={() => setRenk(r.isim)}
                 aria-label={r.isim}
                 title={r.isim}
-                className={cn(
-                  "w-10 h-10 rounded-full border-2 transition-all",
-                  renk === r.isim ? "border-primary ring-2 ring-primary/20 ring-offset-2" : "border-border",
-                )}
-                style={{ backgroundColor: r.kod }}
-              />
+                className="flex flex-col items-center gap-1.5"
+              >
+                <motion.span
+                  whileTap={{ scale: 0.95 }}
+                  className={cn(
+                    "w-10 h-10 rounded-full border-2 transition-all",
+                    renk === r.isim ? "border-primary ring-2 ring-primary/20 ring-offset-2" : "border-border",
+                  )}
+                  style={{ backgroundColor: r.kod }}
+                />
+                <span className={cn(
+                  "text-xs transition-colors",
+                  renk === r.isim ? "text-primary font-medium" : "text-muted",
+                )}>
+                  {r.isim}
+                </span>
+              </button>
             ))}
           </div>
         </div>
