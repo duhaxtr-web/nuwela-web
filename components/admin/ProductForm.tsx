@@ -332,7 +332,14 @@ export function ProductForm({ initial }: { initial?: Product }) {
             <input
               value={renkIsim}
               onChange={(e) => setRenkIsim(e.target.value)}
-              placeholder="Renk adı (Siyah)"
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  addRenk(renkIsim, renkKod);
+                  setRenkIsim("");
+                }
+              }}
+              placeholder="Renk adı (Siyah) — Enter ile ekle"
               className="input-base flex-1"
             />
             <input
