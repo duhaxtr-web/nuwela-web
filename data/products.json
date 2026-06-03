@@ -87,9 +87,9 @@
     "guncelleme_tarihi": "2026-06-03T13:38:42.699Z"
   },
   {
-    "baslik": "SON-TEST",
+    "baslik": "SON-TEST-2",
     "aciklama": "x",
-    "durum": "taslak",
+    "durum": "aktif",
     "resimler": {
       "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/t.jpeg"
     },
@@ -109,7 +109,7 @@
     "id": "178b1249-d158-4d79-9405-dca485ea5e1b",
     "slug": "son-test",
     "olusturulma_tarihi": "2026-06-03T13:57:56.227Z",
-    "guncelleme_tarihi": "2026-06-03T13:57:56.227Z",
+    "guncelleme_tarihi": "2026-06-03T13:57:58.899Z",
     "para_birimi": "TRY"
   }
 ]
