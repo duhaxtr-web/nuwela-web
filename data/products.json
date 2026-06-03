@@ -72,36 +72,5 @@
     "id": "cea28db7-4bb6-4872-bdca-ef08c7792451",
     "olusturulma_tarihi": "2026-06-03T11:41:40.876Z",
     "guncelleme_tarihi": "2026-06-03T12:34:50.794Z"
-  },
-  {
-    "slug": "s",
-    "baslik": "sddd",
-    "aciklama": "dsdss",
-    "durum": "aktif",
-    "resimler": {
-      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780488244039-copy-of-ceramic-mug-11oz-15oz_4.jpg"
-    },
-    "fiyat": 52,
-    "para_birimi": "TRY",
-    "koleksiyonlar": [
-      "Yeni Sezon",
-      "Takım"
-    ],
-    "etiketler": [],
-    "urun_turu": "gunluk_zarafet",
-    "seo_baslik": "",
-    "seo_meta_aciklama": "",
-    "varyant_secenekleri": {
-      "beden": [
-        "XXL"
-      ],
-      "renk": [],
-      "kumas": []
-    },
-    "shopier_verileri": {},
-    "sira": 4,
-    "id": "740ea247-39fd-4938-a223-d7eb3771b2e3",
-    "olusturulma_tarihi": "2026-06-03T12:04:19.194Z",
-    "guncelleme_tarihi": "2026-06-03T12:13:41.255Z"
   }
 ]
