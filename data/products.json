@@ -310,9 +310,9 @@
     "aciklama": "Aerobin kumaş\nBoy: 75 Cm",
     "durum": "aktif",
     "resimler": {
-      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780561044546-7454d64e-1d9b-4fa9-8334-98e32fcb460c.jpg",
-      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780561046848-9ebab5e7-96e9-410d-bde9-2c812e71657d.jpg",
-      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780561049127-b82f02a0-2a87-4dc6-9eb5-86349b62c364.jpg"
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780562757305-7454d64e-1d9b-4fa9-8334-98e32fcb460c.jpg",
+      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780562759135-9ebab5e7-96e9-410d-bde9-2c812e71657d.jpg",
+      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780562761966-b82f02a0-2a87-4dc6-9eb5-86349b62c364.jpg"
     },
     "fiyat": 1450,
     "para_birimi": "TRY",
@@ -355,7 +355,7 @@
     "sira": 8,
     "id": "7d424119-6f8e-4d87-b21c-3fa9e346ccd6",
     "olusturulma_tarihi": "2026-06-04T08:18:48.954Z",
-    "guncelleme_tarihi": "2026-06-04T08:45:19.535Z"
+    "guncelleme_tarihi": "2026-06-04T08:46:04.806Z"
   },
   {
     "slug": "isleme-detayli-aerobin-gomlek-nu205",
