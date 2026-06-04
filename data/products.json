@@ -354,57 +354,5 @@
     "id": "7e88296b-0cc4-4b6a-9e66-a1a05ea8c841",
     "olusturulma_tarihi": "2026-06-04T08:25:33.634Z",
     "guncelleme_tarihi": "2026-06-04T08:25:33.634Z"
-  },
-  {
-    "slug": "isleme-detayli-aerobin-gomlek-nu205",
-    "baslik": "İşleme Detaylı Aerobin Gömlek (NU205)",
-    "aciklama": "Aerobin kumaş\nBoy: 75 Cm",
-    "durum": "aktif",
-    "resimler": {
-      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780563835258-7454d64e-1d9b-4fa9-8334-98e32fcb460c.jpg",
-      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780563836868-9ebab5e7-96e9-410d-bde9-2c812e71657d.jpg",
-      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780563839235-b82f02a0-2a87-4dc6-9eb5-86349b62c364.jpg"
-    },
-    "fiyat": 1450,
-    "para_birimi": "TRY",
-    "koleksiyonlar": [
-      "Yeni Sezon",
-      "Üst Giyim"
-    ],
-    "etiketler": [
-      "YENİ",
-      "ÇOKSATAN",
-      "YENİSEZON",
-      "GÖMLEK"
-    ],
-    "urun_turu": "gunluk_zarafet",
-    "seo_baslik": "",
-    "seo_meta_aciklama": "",
-    "varyant_secenekleri": {
-      "beden": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "renk": [
-        {
-          "isim": "PEMBE",
-          "kod": "#f0b7ee"
-        }
-      ],
-      "kumas": [
-        "AEROBİN"
-      ]
-    },
-    "shopier_verileri": {
-      "shopier_url": "https://www.shopier.com/nuwelaboutique/47747849",
-      "urun_id": "47747849",
-      "shopier_magaza_id": "www.shopier.com/nuwelaboutique"
-    },
-    "sira": 8,
-    "id": "b6fe00c9-1107-4a9e-ac36-97ad1f8d2407",
-    "olusturulma_tarihi": "2026-06-04T09:10:16.107Z",
-    "guncelleme_tarihi": "2026-06-04T09:12:51.326Z"
   }
 ]
