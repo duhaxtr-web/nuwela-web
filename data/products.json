@@ -359,7 +359,7 @@
     "slug": "tensel-kumas-3lu-takim",
     "baslik": " Tensel kumaş 3'lü takım (NU123)",
     "aciklama": "İç bluzu askılı\nBel büzgülü\n38-46 beden aralığı\nPantolon bel lastikli\nCeket : 75 cm\nPantolon : 105 cm",
-    "durum": "taslak",
+    "durum": "aktif",
     "resimler": {
       "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780657721044-978c9de1-c901-48fa-bf2c-26e5c830cc71.jfif",
       "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780657724648-942da0d2-fabf-4674-8e7d-d603ba9131ee.jfif",
@@ -409,6 +409,6 @@
     "sira": 9,
     "id": "39e4e4fd-8c02-42a8-ab45-14fc123a2c70",
     "olusturulma_tarihi": "2026-06-05T11:11:53.179Z",
-    "guncelleme_tarihi": "2026-06-05T11:11:53.179Z"
+    "guncelleme_tarihi": "2026-06-05T11:12:04.326Z"
   }
 ]
