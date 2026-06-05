@@ -410,5 +410,57 @@
     "id": "39e4e4fd-8c02-42a8-ab45-14fc123a2c70",
     "olusturulma_tarihi": "2026-06-05T11:11:53.179Z",
     "guncelleme_tarihi": "2026-06-05T11:12:04.326Z"
+  },
+  {
+    "slug": "cizgili-kot-takim-nu234-220000-tl",
+    "baslik": "Çizgili Kot Takım (NU234)",
+    "aciklama": "Belden büzülebilir\nPantolon beli lastikli\nCepli\n1-2-3 beden (46 bedene kadar uyumlu)",
+    "durum": "aktif",
+    "resimler": {
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780658164789-fc8bd0c5-8416-4825-a36a-fcd5feba41fe.jfif",
+      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780658172875-a9744253-0454-4eb5-bb86-7e7dfcd39892.jfif",
+      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780658186865-149304a8-64b5-4770-9144-7de566fece81.jfif"
+    },
+    "fiyat": 2200,
+    "para_birimi": "TRY",
+    "koleksiyonlar": [
+      "Yeni Sezon",
+      "Takım"
+    ],
+    "etiketler": [
+      "YENİ",
+      "ÇOKSATAN",
+      "İNDİRİM",
+      "KOTTAKIM"
+    ],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "",
+    "seo_meta_aciklama": "",
+    "varyant_secenekleri": {
+      "beden": [
+        "1",
+        "2",
+        "3"
+      ],
+      "renk": [
+        {
+          "isim": "KOYU MAVİ",
+          "kod": "#1714d7"
+        }
+      ],
+      "kumas": [
+        "PAMUK",
+        "KOT"
+      ]
+    },
+    "shopier_verileri": {
+      "shopier_url": "https://www.shopier.com/nuwelaboutique/45474173",
+      "urun_id": "45474173",
+      "shopier_magaza_id": "www.shopier.com/nuwelaboutique"
+    },
+    "sira": 10,
+    "id": "ce3fc9a9-d585-4071-ad8b-841076106c1c",
+    "olusturulma_tarihi": "2026-06-05T11:17:16.072Z",
+    "guncelleme_tarihi": "2026-06-05T11:17:16.072Z"
   }
 ]
