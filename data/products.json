@@ -354,5 +354,61 @@
     "id": "7e88296b-0cc4-4b6a-9e66-a1a05ea8c841",
     "olusturulma_tarihi": "2026-06-04T08:25:33.634Z",
     "guncelleme_tarihi": "2026-06-04T08:25:33.634Z"
+  },
+  {
+    "slug": "tensel-kumas-3lu-takim",
+    "baslik": " Tensel kumaş 3'lü takım (NU123)",
+    "aciklama": "İç bluzu askılı\nBel büzgülü\n38-46 beden aralığı\nPantolon bel lastikli\nCeket : 75 cm\nPantolon : 105 cm",
+    "durum": "taslak",
+    "resimler": {
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780657721044-978c9de1-c901-48fa-bf2c-26e5c830cc71.jfif",
+      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780657724648-942da0d2-fabf-4674-8e7d-d603ba9131ee.jfif",
+      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780657727345-1ae9b9fb-1201-4ecc-9465-4ffe8e25555f.jfif",
+      "resim4": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1780657736141-115db045-b822-4753-a161-1795ed46915e.jfif"
+    },
+    "fiyat": 4100,
+    "para_birimi": "TRY",
+    "koleksiyonlar": [
+      "Yeni Sezon",
+      "Takım"
+    ],
+    "etiketler": [
+      "yeni sezon",
+      "yeni",
+      "üçlütakım",
+      "tensel",
+      "çoksatan"
+    ],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "",
+    "seo_meta_aciklama": "",
+    "varyant_secenekleri": {
+      "beden": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "renk": [
+        {
+          "isim": "açık vizon",
+          "kod": "#cdb888"
+        }
+      ],
+      "kumas": [
+        "tensel",
+        "pamuk"
+      ]
+    },
+    "shopier_verileri": {
+      "shopier_url": "https://www.shopier.com/nuwelaboutique/45474318",
+      "urun_id": "45474318",
+      "shopier_magaza_id": "www.shopier.com/nuwelaboutique"
+    },
+    "sira": 9,
+    "id": "39e4e4fd-8c02-42a8-ab45-14fc123a2c70",
+    "olusturulma_tarihi": "2026-06-05T11:11:53.179Z",
+    "guncelleme_tarihi": "2026-06-05T11:11:53.179Z"
   }
 ]
