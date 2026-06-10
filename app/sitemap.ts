@@ -9,17 +9,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: base, changeFrequency: "weekly", priority: 1.0 },
-    { url: `${base}/urunler`, changeFrequency: "daily", priority: 0.9 },
-    { url: `${base}/koleksiyonlar`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${base}/hakkimizda`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/iletisim`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/sss`, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${base}/kargo`, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${base}/degisim`, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${base}/siparis-iptali`, changeFrequency: "monthly", priority: 0.3 },
-    { url: `${base}/odeme-secenekleri`, changeFrequency: "monthly", priority: 0.3 },
-  ].map((r) => ({ ...r, lastModified: now }));
+    { url: base, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${base}/urunler`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: `${base}/koleksiyonlar`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/hakkimizda`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/iletisim`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/sss`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${base}/kargo`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${base}/degisim`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${base}/siparis-iptali`, lastModified: now, changeFrequency: "monthly", priority: 0.3 },
+    { url: `${base}/odeme-secenekleri`, lastModified: now, changeFrequency: "monthly", priority: 0.3 },
+  ];
 
   const koleksiyonRoutes: MetadataRoute.Sitemap = KOLEKSIYONLAR.map((k) => ({
     url: `${base}/koleksiyonlar/${slugify(k)}`,
