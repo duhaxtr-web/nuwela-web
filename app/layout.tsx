@@ -27,8 +27,9 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   keywords: [
-    "Nuwela Boutique", "tesettür giyim", "açık giyim", "kadın giyim",
-    "abiye", "tunik", "elbise", "Konya butik", "online alışveriş",
+    "Nuwela Boutique", "Nuwela Butik", "nuwela", "nuwelabutik",
+    "tesettür giyim", "açık giyim", "kadın giyim",
+    "abiye", "tunik", "elbise", "Konya butik", "Selçuklu butik", "online alışveriş",
   ],
   authors: [{ name: SITE.name }],
   openGraph: {
@@ -44,6 +45,7 @@ export const metadata: Metadata = {
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
   },
+  alternates: { canonical: SITE.url },
   robots: { index: true, follow: true },
 };
 
