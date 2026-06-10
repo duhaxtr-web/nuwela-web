@@ -8,7 +8,7 @@ export const SITE = {
   phone: "0533 321 73 95",
   phoneIntl: "+905333217395",
   whatsapp: "+905333217395",
-  address: "Yazır Mahallesi Turhanlar Sokak 10/J KONYA/SELÇUKLU",
+  address: "Yazır Mahallesi Turhanlar Sokak 10/J SELÇUKLU / KONYA",
   hours: "09:00 – 19:00",
   social: {
     instagram: "https://www.instagram.com/nuwelaboutique",
