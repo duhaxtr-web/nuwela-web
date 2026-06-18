@@ -462,5 +462,56 @@
     "id": "ce3fc9a9-d585-4071-ad8b-841076106c1c",
     "olusturulma_tarihi": "2026-06-05T11:17:16.072Z",
     "guncelleme_tarihi": "2026-06-05T11:17:16.072Z"
+  },
+  {
+    "slug": "s",
+    "baslik": "GÜNLÜK VE ŞIK YAZLIK ELBİSE (NU130)",
+    "aciklama": "TÜL MODAL KUMAŞ\nBOY: 135 CM\n1-2-3 BEDEN (48 BEDENE KADAR UYUMLU)\nKUŞAKLI\nÜRÜN 2 PARÇA OLARAK GELMEKTE\nİÇ ASTAR ELBİSE\nDIŞ ELBİSE VE KUŞAK",
+    "durum": "aktif",
+    "resimler": {
+      "resim1": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1781777971153-2736013c-3773-49e7-8e33-90ce69c510aa.jpg",
+      "resim2": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1781777973617-c03b3a42-7b10-4a71-909b-05123ef649ca.jpg",
+      "resim3": "https://ogen3niu5oy9divv.public.blob.vercel-storage.com/products/1781777976071-d81862a6-a251-4b67-ac3a-595c3830d636.jpg"
+    },
+    "fiyat": 2750,
+    "para_birimi": "TRY",
+    "koleksiyonlar": [
+      "Yeni Sezon",
+      "Elbise"
+    ],
+    "etiketler": [
+      "YENİ",
+      "YAZLIK",
+      "İNDİRİM",
+      "ÇOK SATAN",
+      "İNCE",
+      "ELBİSE"
+    ],
+    "urun_turu": "gunluk_zarafet",
+    "seo_baslik": "",
+    "seo_meta_aciklama": "",
+    "varyant_secenekleri": {
+      "beden": [
+        "1",
+        "2",
+        "3"
+      ],
+      "renk": [
+        {
+          "isim": "KAHVERENGİ",
+          "kod": "#4b3011"
+        }
+      ],
+      "kumas": []
+    },
+    "shopier_verileri": {
+      "shopier_url": "https://www.shopier.com/nuwelaboutique/48238765",
+      "urun_id": "48238765",
+      "shopier_magaza_id": "www.shopier.com/nuwelaboutique"
+    },
+    "sira": 1,
+    "id": "de031927-7be6-4f9e-875d-75364634be5e",
+    "olusturulma_tarihi": "2026-06-18T10:21:29.998Z",
+    "guncelleme_tarihi": "2026-06-18T10:21:29.998Z"
   }
 ]
